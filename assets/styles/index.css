@@ -19,16 +19,19 @@ body {
   margin-left: auto;
   overflow: hidden;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -56,10 +59,12 @@ body {
   overflow: hidden;
   z-index: 2;
 }
+
 .header__navbar {
   width: 100vw;
   height: 150px;
 }
+
 .header__navbar .container {
   height: 100%;
 }
@@ -106,6 +111,7 @@ body {
   display: flex;
   align-items: flex-end;
 }
+
 .header__content__text__media {
   color: var(--red-2);
   margin-top: -45px;
@@ -127,6 +133,7 @@ body {
   width: 90vw;
   height: 80vh;
 }
+
 .design__circle-1 {
   position: absolute;
   height: 100px;
@@ -211,11 +218,13 @@ body {
 .image-box .image {
   height: 300px;
   width: 500px;
-  background-color: blue;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  /* background-image: url('../images/Aioanei Dragos.jpg'); */
 }
 
-.image-box .image::after{
+.image-box .image::after {
   content: '';
   position: absolute;
   top: -15px;
