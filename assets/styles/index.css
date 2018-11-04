@@ -17,6 +17,7 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .container {
@@ -64,7 +65,7 @@ body {
 }
 
 .header__navbar .logo {
-  background: url('../images//svODXkP.png');
+  background: url('../images/svODXkP.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -138,24 +139,34 @@ body {
 
 .content {
   position: relative;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   z-index: 1;
 }
 
 .line-1 {
-  height: 100vh;
+  height: 100%;
   width: 2px;
-  /* background-color: var(--text-secondary); */
-  background-color: red;
+  background-color: var(--text-secondary);
   position: absolute;
   left: 205px;
 }
-.line-2 {
-  height: 100vh;
-  width: 2px;
-  /* background-color: var(--text-secondary); */
+
+.line-1 .circle {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
   background-color: red;
+  left: -15px;
+  top: 100px;
+  /*transform: translate3d(42px, -62px, -135px);*/
+}
+
+.line-2 {
+  height: 100%;
+  width: 2px;
+  background-color: var(--text-secondary);
   position: absolute;
   right: 194px;
 }
@@ -163,17 +174,57 @@ body {
 .images {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .image-box:first-child {
   padding-top: 100px;
 }
 
+
+
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.row:nth-child(2n+1) {
+  flex-direction: row-reverse;
+}
+
+.row:first-child {
+  margin-top: 100px;
+}
+
+.row .icon {
+  height: 100px;
+  width: 100px;
+  background: url('../images/191471.svg');
+}
+
+.row:nth-child(2n+1) .icon {
+  background: url('../images/304211.svg') !important;
+}
+
 .image-box .image {
   height: 300px;
   width: 500px;
   background-color: blue;
+  position: relative;
+}
+
+.image-box .image::after{
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  height: 200px;
+  width: 400px;
+  background-color: red;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .see-more {
@@ -182,7 +233,8 @@ body {
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 17px;
+  margin-left: 15px;
 }
 
 .see-more .line {
@@ -199,4 +251,13 @@ body {
   justify-content: flex-end;
   font-size: 2rem;
   margin-top: 5px;
+}
+
+.row:nth-child(2n) .see-more {
+  justify-content: flex-start;
+  margin-left: 120px;
+}
+
+.row:nth-child(2n+1) .title {
+  justify-content: flex-start;
 }
