@@ -1,7 +1,8 @@
 const container = document.getElementById('images');
 
 const persons = {
-    "Aioanei Dragos": "../assets/images/Aioanei_Dragos.jpg"
+    "Aioanei Dragos": "../assets/images/Aioanei_Dragos.jpg",
+    "Andrei Simion": "../assets/images/Andrei_Simion.jpg"
 }
 
 Object.keys(persons).forEach(person => {
