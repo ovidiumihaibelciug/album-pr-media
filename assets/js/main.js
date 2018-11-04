@@ -1,9 +1,9 @@
 const container = document.getElementById('images');
 
 const persons = {
-    "Aioanei Dragos": "../asii_test/assets/images/Aioanei_Dragos.jpg",
-    "Andrei Simion": "../asii_test/assets/images/Andrei_Simion.jpg",
-    "Catalina Gavrilovici": "../asii_test/assets/images/Catalina Gavrilovici.jpg",
+    "Aioanei Dragos": "../album-pr-media/assets/images/Aioanei_Dragos.jpg",
+    "Andrei Simion": "../album-pr-media/assets/images/Andrei_Simion.jpg",
+    "Catalina Gavrilovici": "../album-pr-media/assets/images/Catalina Gavrilovici.jpg",
 };
 
 Object.keys(persons).forEach(person => {
