@@ -1,12 +1,14 @@
 const container = document.getElementById('images');
 
 const persons = {
-    "Aioanei Dragos": "../assets/images/Aioanei_Dragos.jpg",
-    "Andrei Simion": "../assets/images/Andrei_Simion.jpg"
-}
+    "Aioanei Dragos": "../asii_test/assets/images/Aioanei_Dragos.jpg",
+    "Andrei Simion": "../asii_test/assets/images/Andrei_Simion.jpg",
+    "Catalina Gavrilovici": "../asii_test/assets/images/Catalina Gavrilovici.jpg",
+};
 
 Object.keys(persons).forEach(person => {
-    const row = document.createElement('row');
+    const row = document.createElement('div');
+    row.classList = 'row';
 
     const icon = document.createElement('div');
     icon.classList = 'icon';
@@ -17,7 +19,7 @@ Object.keys(persons).forEach(person => {
     const image = document.createElement('div');
     image.classList = 'image';
 
-    image.style.backgroundImage = `url(${persons[person]})`;
+    image.style.backgroundImage = `url(${persons[person].replace(/\s/g, '%20')})`;
 
     const design = document.createElement('div');
     design.classList = 'design-box';
