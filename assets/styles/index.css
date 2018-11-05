@@ -212,7 +212,7 @@ body {
 }
 
 .row:nth-child(2n+1) .icon {
-  background: url('../images/304211.svg') !important;
+  background: url('../images/304211.svg');
 }
 
 .image-box .image {
@@ -273,4 +273,8 @@ body {
 
 .row:nth-child(2n+1) .title {
   justify-content: flex-start;
+}
+
+.icon-2 {
+  background: url('../images/award.svg') !important;
 }

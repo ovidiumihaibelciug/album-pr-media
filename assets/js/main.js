@@ -3,7 +3,8 @@ const container = document.getElementById('images');
 var persons = [
   {
     name: "Raducanu Andrei",
-    image: "../album-pr-media/assets/images/Raducanu Andrei.jpg"
+    image: "../album-pr-media/assets/images/Raducanu Andrei.jpg",
+    isLeader: true
   },
   {
     name: "Aioanei Dragos",
@@ -129,12 +130,12 @@ var persons = [
   }];
 
 persons.forEach(person => {
-  let { name, image, isCentered } = person;
+  let { name, image, isCentered, isLeader } = person;
   const row = document.createElement('div');
-  row.classList = 'row';
+  row.classList = `row ${isLeader && 'row-leader'}`;
 
   const icon = document.createElement('div');
-  icon.classList = 'icon';
+  icon.classList = `icon ${isLeader && "icon-2"}`;
 
   const box = document.createElement('div');
   box.classList = 'image-box';
@@ -153,6 +154,12 @@ persons.forEach(person => {
 
   row.appendChild(icon);
   row.appendChild(box);
+
+  if (isLeader) {
+    const icon2 = document.createElement('div');
+    icon2.classList = 'icon icon-2';
+    row.appendChild(icon2);
+  }
 
   box.appendChild(compImage);
   box.appendChild(design);
