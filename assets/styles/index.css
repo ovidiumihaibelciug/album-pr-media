@@ -220,8 +220,12 @@ body {
   width: 500px;
   position: relative;
   background-size: cover;
-  background-position: center;
-  /* background-image: url('../images/Aioanei Dragos.jpg'); */
+  background-repeat: no-repeat;
+  background-position: center -50px;
+}
+
+.background-centered {
+  background-position: center !important;
 }
 
 .image-box .image::after {
