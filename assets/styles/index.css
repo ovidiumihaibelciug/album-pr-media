@@ -78,6 +78,7 @@ body {
   width: 150px;
   padding: 15px;
   padding-left: 0;
+  animation: skew-animation 1s infinite linear;
 }
 
 .header__content__text {
@@ -348,7 +349,6 @@ body {
   }
 }
 
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -358,12 +358,24 @@ body {
   }
 }
 
-
 @keyframes slide-in {
   from {
     transform: translate(-1000px);
   }
   to {
     transform: translate(0px);
+  }
+}
+
+@keyframes skew-animation {
+  0% {
+    transform: skew(0);
+  }
+  50% {
+    transform: skew(20deg);
+  }
+
+  100% {
+    transform: skew(0);
   }
 }
