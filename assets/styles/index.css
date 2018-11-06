@@ -91,6 +91,12 @@ body {
   text-transform: uppercase;
   margin-bottom: -20px;
   margin-left: 5px;
+  -webkit-animation: slide-in 1s;
+  -o-animation: slide-in 1s;
+  animation: slide-in 1s;
+  animation-iteration-count: 1;
+  z-index: 100;
+  /*position: absolute;*/
 }
 
 .header__content__text__row {
@@ -101,6 +107,12 @@ body {
   color: var(--red-1);
   font-size: 8rem;
   text-transform: uppercase;
+  -webkit-animation: slide-in 1.5s;
+  -o-animation: slide-in 1.5s;
+  animation: slide-in 1.5s;
+  animation-iteration-count: 1;
+  z-index: 100;
+  /*position: absolute;*/
 }
 
 .header__content__text__and {
@@ -110,6 +122,12 @@ body {
   text-transform: uppercase;
   display: flex;
   align-items: flex-end;
+  -webkit-animation: slide-in 1s;
+  -o-animation: slide-in 1s;
+  animation: slide-in 1s;
+  animation-iteration-count: 1;
+  z-index: 100;
+  /*position: absolute;*/
 }
 
 .header__content__text__media {
@@ -120,6 +138,12 @@ body {
   text-transform: uppercase;
   display: flex;
   align-items: flex-end;
+  -webkit-animation: slide-in 2s;
+  -o-animation: slide-in 2s;
+  animation: slide-in 2s;
+  animation-iteration-count: 1;
+  z-index: 100;
+  /*position: absolute;*/
 }
 
 .design__square-1 {
@@ -142,6 +166,10 @@ body {
   border-radius: 100%;
   top: 42%;
   right: 30%;
+  -webkit-animation: fade-in 1.5s;
+  -o-animation: fade-in 1.5s;
+  animation: fade-in 1.5s;
+  animation-iteration-count: 1;
 }
 
 .content {
@@ -219,6 +247,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center -50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .background-centered {
@@ -316,5 +345,25 @@ body {
 
   .row .icon {
     margin-bottom: 50px;
+  }
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes slide-in {
+  from {
+    transform: translate(-1000px);
+  }
+  to {
+    transform: translate(0px);
   }
 }
