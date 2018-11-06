@@ -187,9 +187,6 @@ body {
   padding-top: 100px;
 }
 
-
-
-
 .row {
   display: flex;
   justify-content: space-around;
@@ -277,4 +274,47 @@ body {
 
 .icon-2 {
   background: url('../images/award.svg') !important;
+}
+
+@media screen and (max-width: 600px) {
+  .design__circle-1 {
+    display: none;
+  }
+
+  .header__content__text {
+    margin-top: 0;
+  }
+
+  .header__content__text__dep {
+    font-size: 1rem;
+  }
+
+  .header__content__text__pr {
+    font-size: 4rem;
+    margin-top: 15px;
+  }
+
+  .header__content__text__and {
+    font-size: 2rem;
+  }
+
+  .header__content__text__media {
+    font-size: 4rem;
+    margin-top: -15px;
+  }
+
+  .image-box .title {
+    justify-content: center !important;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .row {
+    flex-direction: column !important;
+  }
+
+  .row .icon {
+    margin-bottom: 50px;
+  }
 }
